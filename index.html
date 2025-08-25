@@ -39,25 +39,36 @@
         }
 
         .project-card {
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             background: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             height: 100%;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(65,105,225,0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(65,105,225,0.2);
         }
 
         .project-image {
             width: 100%;
-            height: 250px;
+            height: 200px;
             object-fit: contain;
             background: #f8f9fa;
             padding: 1rem;
+        }
+
+        .education-info {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .text-white-75 {
+            color: rgba(255, 255, 255, 0.75);
         }
 
         .badge-custom {
@@ -99,7 +110,17 @@
                     <div class="glass-card">
                         <img src="profile-photo.jpg" alt="Anirudh Narayan" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid white;">
                         <h1 class="display-4 fw-bold mb-3">Anirudh Narayan</h1>
-                        <p class="lead mb-4">Exploring the intersection of AI & Biomedical Engineering</p>
+                        <div class="education-info mb-4">
+                            <p class="h5 mb-2">University of Massachusetts Amherst</p>
+                            <p class="text-white-75 mb-3"><em>Doctor of Philosophy in Biomedical Engineering</em> • 2024-Present</p>
+                            
+                            <p class="h5 mb-2">Birla Institute of Technology and Science Pilani</p>
+                            <p class="text-white-75 mb-3"><em>Bachelor of Engineering in Electronics and Instrumentation</em> • 2020-2024<br>
+                            Minor in Computing and Intelligence</p>
+                            
+                            <p class="h5 mb-2">Indian Institute Of Technology Madras</p>
+                            <p class="text-white-75 mb-3"><em>Bachelor of Science (Online mode) in Data Science and Applications</em> • 2021-2024</p>
+                        </div>
                         <div class="social-links mb-4">
                             <a href="mailto:anirudhnarayand4@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
                             <a href="https://www.linkedin.com/in/anirudh-narayan-1b708a241/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -158,14 +179,33 @@
         <div class="container">
             <h2 class="display-5 fw-bold mb-5">Featured Projects</h2>
             <div class="row g-4">
+                <!-- IoT-Fog Computing RL Project -->
+                <div class="col-lg-4">
+                    <div class="project-card">
+                        <img src="assets/rl-project.png" alt="IoT-Fog Computing" class="project-image">
+                        <div class="p-4">
+                            <span class="badge-custom text-white mb-3 d-inline-block">Reinforcement Learning</span>
+                            <h3 class="h4 mb-3">IoT-Fog Computing Task Offloading</h3>
+                            <p class="mb-4">
+                                • Developed multi-agent DQN system with LSTM integration achieving 41.8% improvement in rewards<br>
+                                • Implemented Dueling DQN and Experience Replay for resource optimization<br>
+                                • Designed RL agents for 25 IoT devices and 4 fog nodes with 95% task success rate
+                            </p>
+                            <a href="https://github.com/AnirudhNarayan/Reinforcement-Learning-Project" class="btn btn-primary rounded-pill" target="_blank">
+                                <i class="fab fa-github me-2"></i>View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Lung Cancer Project -->
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="project-card">
                         <img src="assets/lung-cancer.png" alt="Lung Cancer Detection" class="project-image">
                         <div class="p-4">
                             <span class="badge-custom text-white mb-3 d-inline-block">AI in Healthcare</span>
                             <h3 class="h4 mb-3">Lung Nodule Classification</h3>
-                            <p class="mb-4">Innovative deep learning solution that analyzes CT scans to identify and classify lung nodules for early cancer detection. Implemented using state-of-the-art CNN architectures and achieved high accuracy in nodule classification.</p>
+                            <p class="mb-4">Innovative deep learning solution that analyzes CT scans to identify and classify lung nodules for early cancer detection. Implemented using state-of-the-art CNN architectures.</p>
                             <a href="https://github.com/AnirudhNarayan/Lung-Nodule-Classification-using-Deep-Learning-Models" class="btn btn-primary rounded-pill" target="_blank">
                                 <i class="fab fa-github me-2"></i>View Project
                             </a>
@@ -174,13 +214,13 @@
                 </div>
 
                 <!-- Education Analytics Project -->
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="project-card">
                         <img src="assets/education-analytics.png" alt="Education Analytics Platform" class="project-image">
                         <div class="p-4">
                             <span class="badge-custom text-white mb-3 d-inline-block">ML Analytics</span>
                             <h3 class="h4 mb-3">Student Enrollment Analysis</h3>
-                            <p class="mb-4">Machine learning-based system for predicting student enrollment status and identifying at-risk students. Helps educational institutions implement timely interventions and improve student retention rates.</p>
+                            <p class="mb-4">Machine learning-based system for predicting student enrollment status and identifying at-risk students. Helps educational institutions improve retention rates.</p>
                             <a href="https://github.com/AnirudhNarayan/Student-Enrollment-Status-Machine-Learning-Project" class="btn btn-primary rounded-pill" target="_blank">
                                 <i class="fab fa-github me-2"></i>View Project
                             </a>
