@@ -134,12 +134,64 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="floating">
-                        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_XyoAB1.json" background="transparent" speed="1" style="width: 100%; height: 400px;" loop autoplay></lottie-player>
+                    <div class="glass-card news-section">
+                        <h3 class="h4 text-white mb-4">
+                            <i class="fas fa-newspaper me-2"></i> Latest News
+                        </h3>
+                        <div class="news-items">
+                            <div class="news-item mb-4">
+                                <span class="news-date">May 2025</span>
+                                <p class="news-content mb-0">Passed my oral quals successfully</p>
+                            </div>
+                            <div class="news-item mb-4">
+                                <span class="news-date">Sept 2024</span>
+                                <p class="news-content mb-0">Joined PhD in Biomedical Engineering at UMass Amherst</p>
+                            </div>
+                            <div class="news-item">
+                                <span class="news-date">May 2024</span>
+                                <p class="news-content mb-0">Graduated from BITS Pilani with BE and BSc from IIT Madras</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <style>
+            .news-section {
+                height: 100%;
+                padding: 2rem;
+            }
+            .news-item {
+                position: relative;
+                padding-left: 20px;
+                border-left: 2px solid rgba(255, 255, 255, 0.2);
+            }
+            .news-date {
+                display: inline-block;
+                padding: 4px 8px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+                font-size: 0.85rem;
+                color: rgba(255, 255, 255, 0.9);
+                margin-bottom: 8px;
+            }
+            .news-content {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+            .news-item:before {
+                content: '';
+                position: absolute;
+                left: -6px;
+                top: 8px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #fff;
+            }
+        </style>
     </section>
 
     <!-- Publications Section -->
