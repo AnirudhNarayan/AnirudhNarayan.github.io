@@ -3,240 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anirudh Narayan - AI/ML Engineer & Researcher</title>
+    <title>Anirudh Narayan | Biomedical AI Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #0057B7;
-            --text-color: #2c3e50;
-            --bg-light: #f8f9fa;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #004094 100%);
-            color: white;
-            padding: 100px 0;
-        }
-        .section-title {
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-        }
-        .achievement-card {
-            border-left: 4px solid var(--primary-color);
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background: var(--bg-light);
-        }
-        .social-links a {
-            color: white;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-        }
-        .social-links a:hover {
-            transform: translateY(-3px);
-        }
-        .project-card {
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; color: #222; }
+        .hero-section { background: linear-gradient(135deg, #0057B7 0%, #004094 100%); color: white; padding: 80px 0 40px 0; }
+        .profile-photo { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 5px solid #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.15); margin-bottom: 20px; }
+        .social-links a { color: white; margin: 0 10px; font-size: 1.7rem; }
+        .section-title { color: #0057B7; margin-bottom: 2rem; font-weight: 700; }
+        .project-card { background: white; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.07); margin-bottom: 2rem; }
+        .project-img { width: 100%; max-width: 320px; border-radius: 12px; margin-bottom: 1rem; }
+        .skills-logo { height: 40px; margin-right: 10px; }
+        .contact-section { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; }
+        .edu-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 1rem; }
+        .animated-lung { width: 120px; height: 120px; display: block; margin: 0 auto 1rem auto; }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="container text-center">
-            <div class="profile-photo mb-4">
-                <!-- Add your photo here -->
-                <img src="profile-photo.jpg" alt="Anirudh Narayan" class="rounded-circle shadow" style="width: 200px; height: 200px; object-fit: cover; border: 4px solid white;">
-            </div>
-            <h1 class="display-4 mb-3">Anirudh Narayan</h1>
-            <p class="lead mb-4">AI/ML Engineer & Researcher</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/anirudh-narayan-1b708a241/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/AnirudhNarayan" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:anidev0102@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
+    <div class="hero-section text-center">
+        <img src="profile-photo.jpg" alt="Anirudh Narayan" class="profile-photo">
+        <h1 class="display-5 fw-bold mb-2">Anirudh Narayan</h1>
+        <p class="lead mb-3">PhD Student | Biomedical Engineering & AI</p>
+        <div class="mb-3">
+            <a href="mailto:anirudhnarayand4@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/anirudh-narayan-1b708a241/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AnirudhNarayan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         </div>
+        <p class="mb-0">Contact: anirudhnarayand4@gmail.com</p>
     </div>
-
-    <!-- Main Content -->
-    <div class="container my-5">
-        <!-- About Section -->
+    <div class="container py-5">
         <section class="mb-5">
             <h2 class="section-title">About Me</h2>
-            <p class="lead">Results-driven engineer and researcher with a proven record of delivering impactful AI/ML solutions in biomedical imaging, energy systems, and computer vision. Currently pursuing Ph.D. in Biomedical Engineering at UMass Amherst.</p>
+            <p>I am a PhD student in Biomedical Engineering at UMass Amherst, researching AI applications in biomedical data. I am passionate about building impactful solutions in healthcare and technology.</p>
         </section>
-
-        <!-- Key Achievements -->
-        <section class="mb-5">
-            <h2 class="section-title">Key Achievements</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="achievement-card">
-                        <h5><i class="fas fa-trophy text-primary"></i> First Author Publication</h5>
-                        <p>Published in Energy Storage (Wiley) journal on ML-based battery systems prediction (2024)</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="achievement-card">
-                        <h5><i class="fas fa-brain text-primary"></i> Advanced AI Research</h5>
-                        <p>Developed GNN+Physics model for Tau PET imaging at UMass Amherst (2025)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Experience -->
-        <section class="mb-5">
-            <h2 class="section-title">Research Experience</h2>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Graduate Research Assistant</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">BIDSLab, UMass Amherst (2025-Present)</h6>
-                    <p class="card-text">
-                        • Automated large-scale preprocessing of ADNI neuroimaging data<br>
-                        • Developed robust pipelines for segmentation and registration
-                    </p>
-                </div>
-            </div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Research Assistant</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">BITS Pilani (2023)</h6>
-                    <p class="card-text">
-                        • Achieved R²=0.99 with deep learning models for microgrid prediction<br>
-                        • Implemented LSTM, ANN, GRU, RNN architectures
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
         <section class="mb-5">
             <h2 class="section-title">Featured Projects</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Lung Cancer CT Scan Analysis</h5>
-                            <p class="card-text">Built and compared CNN, ResNet, DenseNet models for lung nodule detection and malignancy classification.</p>
-                            <a href="https://github.com/AnirudhNarayan/Lung-Nodule-Classification-using-Deep-Learning-Models" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
+            <div class="project-card p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <!-- Animated Lung SVG -->
+                        <svg class="animated-lung" viewBox="0 0 120 120">
+                            <ellipse cx="40" cy="60" rx="30" ry="50" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+                            <ellipse cx="80" cy="60" rx="30" ry="50" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+                            <circle cx="60" cy="60" r="10" fill="#90caf9">
+                                <animate attributeName="r" values="10;18;10" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Lung Nodule Classification using Deep Learning</h4>
+                        <p>AI-powered detection and classification of lung nodules from CT scans, improving early cancer diagnosis.</p>
+                        <a href="https://github.com/AnirudhNarayan/Lung-Nodule-Classification-using-Deep-Learning-Models" target="_blank" class="btn btn-outline-primary btn-sm">GitHub Repo</a>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Student Enrollment Prediction</h5>
-                            <p class="card-text">Multi-class classification using XGBoost, SVM, Decision Trees, achieving F1-score: 0.77.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
+            </div>
+            <div class="project-card p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Energy_storage_icon.svg" alt="Energy Storage" class="project-img">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>ML-based Prediction of Battery Stack Temperature</h4>
+                        <p>Machine learning models predict thermal behavior in energy storage systems for safer, efficient batteries.</p>
+                        <a href="https://github.com/AnirudhNarayan/Battery-ML-Prediction" target="_blank" class="btn btn-outline-primary btn-sm">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721275.png" alt="Student Classification" class="project-img">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Student Enrollment Status Classification</h4>
+                        <p>Multi-class ML model predicts student outcomes (dropout, enrolled, graduate) for education analytics.</p>
+                        <a href="https://github.com/AnirudhNarayan/Student-Enrollment-ML" target="_blank" class="btn btn-outline-primary btn-sm">GitHub Repo</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Skills -->
         <section class="mb-5">
             <h2 class="section-title">Skills & Technologies</h2>
-            
-            <!-- Languages -->
-            <div class="mb-4">
-                <h5><i class="fas fa-code"></i> Languages</h5>
-                <div class="row align-items-center">
-                    <div class="col-auto">
-                        <img src="https://www.python.org/static/community_logos/python-logo-generic.svg" alt="Python" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="SQL" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" height="40">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Frameworks -->
-            <div class="mb-4">
-                <h5><i class="fas fa-brain"></i> ML/DL Frameworks</h5>
-                <div class="row align-items-center">
-                    <div class="col-auto">
-                        <img src="https://pytorch.org/assets/images/pytorch-logo.png" alt="PyTorch" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://www.tensorflow.org/images/tf_logo_social.png" alt="TensorFlow" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://numpy.org/images/logo.svg" alt="NumPy" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" height="40">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Web Technologies -->
-            <div class="mb-4">
-                <h5><i class="fas fa-laptop-code"></i> Web Technologies</h5>
-                <div class="row align-items-center">
-                    <div class="col-auto">
-                        <img src="https://vuejs.org/images/logo.png" alt="Vue.js" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://www.javascript.com/etc.clientlibs/pluralsight/clientlibs/clientlib-main/resources/images/js-logo.png" alt="JavaScript" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png" alt="Flask" height="40">
-                    </div>
-                    <div class="col-auto">
-                        <img src="https://static.djangoproject.com/img/logos/django-logo-negative.png" alt="Django" height="40">
-                    </div>
-                </div>
+            <div class="row mb-3">
+                <div class="col-auto"><img src="https://www.python.org/static/community_logos/python-logo-generic.svg" alt="Python" class="skills-logo" title="Python"></div>
+                <div class="col-auto"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java" class="skills-logo" title="Java"></div>
+                <div class="col-auto"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" class="skills-logo" title="C++"></div>
+                <div class="col-auto"><img src="https://pytorch.org/assets/images/pytorch-logo.png" alt="PyTorch" class="skills-logo" title="PyTorch"></div>
+                <div class="col-auto"><img src="https://www.tensorflow.org/images/tf_logo_social.png" alt="TensorFlow" class="skills-logo" title="TensorFlow"></div>
+                <div class="col-auto"><img src="https://numpy.org/images/logo.svg" alt="NumPy" class="skills-logo" title="NumPy"></div>
+                <div class="col-auto"><img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" class="skills-logo" title="Pandas"></div>
+                <div class="col-auto"><img src="https://vuejs.org/images/logo.png" alt="Vue.js" class="skills-logo" title="Vue.js"></div>
+                <div class="col-auto"><img src="https://www.javascript.com/etc.clientlibs/pluralsight/clientlibs/clientlib-main/resources/images/js-logo.png" alt="JavaScript" class="skills-logo" title="JavaScript"></div>
+                <div class="col-auto"><img src="https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png" alt="Flask" class="skills-logo" title="Flask"></div>
+                <div class="col-auto"><img src="https://static.djangoproject.com/img/logos/django-logo-negative.png" alt="Django" class="skills-logo" title="Django"></div>
             </div>
         </section>
-
-        <!-- Education -->
         <section class="mb-5">
             <h2 class="section-title">Education</h2>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Ph.D. in Biomedical Engineering</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">University of Massachusetts Amherst (2024-Present)</h6>
-                </div>
+            <div class="edu-card p-3 mb-2">
+                <h5>PhD in Biomedical Engineering</h5>
+                <p class="mb-0">UMass Amherst</p>
             </div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">B.E. in Electronics and Instrumentation</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">BITS Pilani (2020-2024)</h6>
-                    <p class="card-text">Minor in Computing and Intelligence</p>
-                </div>
+            <div class="edu-card p-3 mb-2">
+                <h5>B.E. in Electronics & Instrumentation</h5>
+                <p class="mb-0">BITS Pilani | Minor: Computing & Intelligence</p>
+            </div>
+            <div class="edu-card p-3 mb-2">
+                <h5>BSc in Data Science & Applications</h5>
+                <p class="mb-0">IIT Madras (Online)</p>
             </div>
         </section>
+        <section class="contact-section mb-5">
+            <h2 class="section-title">Contact</h2>
+            <p>Email: <a href="mailto:anirudhnarayand4@gmail.com">anirudhnarayand4@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/anirudh-narayan-1b708a241/" target="_blank">anirudh-narayan-1b708a241</a></p>
+            <p>GitHub: <a href="https://github.com/AnirudhNarayan" target="_blank">AnirudhNarayan</a></p>
+        </section>
     </div>
-
-    <!-- Footer -->
     <footer class="bg-light py-4">
         <div class="container text-center">
             <p>© 2025 Anirudh Narayan. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
