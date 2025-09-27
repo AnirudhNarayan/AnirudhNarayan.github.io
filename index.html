@@ -11,211 +11,472 @@
         :root {
             --primary: #4169E1;
             --secondary: #1E90FF;
-            --dark: #1a1a1a;
-            --light: #f8f9fa;
+            --dark-bg: #1e2a3a;
+            --darker-bg: #121a26;
+            --accent: #4169E1;
+            --text-light: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --section-padding: 5rem 0;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
         }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--light);
-            color: var(--dark);
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        section {
+            padding: var(--section-padding);
+        }
+
+        .navbar {
+            background-color: var(--darker-bg);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            margin: 0 1rem;
+            position: relative;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link.active {
+            color: var(--accent);
         }
 
         .hero-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background-image: linear-gradient(rgba(30, 42, 58, 0.8), rgba(18, 26, 38, 0.9)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
+            background-size: cover;
+            background-position: center;
             min-height: 100vh;
-            padding: 100px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-container {
+            max-width: 800px;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 1rem auto 0;
+        }
+
+        .education-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
             position: relative;
             overflow: hidden;
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 2rem;
-            color: white;
+        .education-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--accent);
+        }
+
+        .education-degree {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-institution {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-years {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .publication-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
         .project-card {
-            border-radius: 15px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
             overflow: hidden;
-            background: white;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
             height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(65,105,225,0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
         .project-image {
             width: 100%;
             height: 200px;
             object-fit: contain;
-            background: #f8f9fa;
+            background-color: rgba(255, 255, 255, 0.05);
             padding: 1rem;
         }
 
-        .education-info {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
+        .project-content {
             padding: 1.5rem;
-            margin-top: 1rem;
         }
 
-        .text-white-75 {
-            color: rgba(255, 255, 255, 0.75);
-        }
-
-        .badge-custom {
-            background: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-
-        .social-links a {
+        .project-tag {
+            display: inline-block;
+            background-color: var(--accent);
             color: white;
-            font-size: 1.8rem;
-            margin: 0 15px;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-project {
+            background-color: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 30px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
-        .social-links a:hover {
-            transform: translateY(-5px);
+        .btn-project:hover {
+            background-color: var(--accent);
+            color: white;
         }
 
-        .floating {
-            animation: float 3s ease-in-out infinite;
+        .skills-section {
+            background-color: var(--darker-bg);
         }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+        .skill-category {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-category-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-category-title img {
+            width: 25px;
+            margin-right: 0.75rem;
+        }
+
+        .skill-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            margin: 0.25rem;
+        }
+
+        .contact-section {
+            background-color: var(--darker-bg);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .contact-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-text {
+            color: var(--text-muted);
+        }
+
+        footer {
+            background-color: var(--darker-bg);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav-link {
+                margin: 0 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">EDUCATION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">PUBLICATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">SKILLS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center">
+    <section id="home" class="hero-section">
+        <div class="container profile-container">
+            <img src="profile-photo.jpg" alt="Anirudh Narayan" class="profile-photo">
+            <h1 class="hero-title">Anirudh Narayan</h1>
+            <p class="hero-subtitle">Exploring the intersection of AI & Biomedical Engineering</p>
+            <div class="social-links">
+                <a href="mailto:anirudhnarayand4@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/anirudh-narayan-1b708a241/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AnirudhNarayan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="glass-card">
-                        <img src="profile-photo.jpg" alt="Anirudh Narayan" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid white;">
-                        <h1 class="display-4 fw-bold mb-3">Anirudh Narayan</h1>
-                        <p class="lead mb-4">Exploring the intersection of AI & Biomedical Engineering</p>
-                        <div class="education-info mb-4">
-                            <div class="mb-3">
-                                <p class="h6 mb-1 text-white">University of Massachusetts Amherst</p>
-                                <small class="text-white-75">Ph.D. in Biomedical Engineering • 2024-Present</small>
-                            </div>
-                            <div class="mb-3">
-                                <p class="h6 mb-1 text-white">Birla Institute of Technology and Science Pilani</p>
-                                <small class="text-white-75">B.E. in Electronics and Instrumentation • 2020-2024<br>
-                                Minor in Computing and Intelligence</small>
-                            </div>
-                            <div class="mb-3">
-                                <p class="h6 mb-1 text-white">Indian Institute Of Technology Madras</p>
-                                <small class="text-white-75">BSc (Online) in Data Science and Applications • 2021-2024</small>
-                            </div>
-                        </div>
-                        <div class="social-links mb-4">
-                            <a href="mailto:anirudhnarayand4@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://www.linkedin.com/in/anirudh-narayan-1b708a241/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/AnirudhNarayan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="glass-card news-section">
-                        <h3 class="h4 text-white mb-4">
-                            <i class="fas fa-newspaper me-2"></i> Latest News
-                        </h3>
-                        <div class="news-items">
-                            <div class="news-item mb-4">
-                                <span class="news-date">May 2025</span>
-                                <p class="news-content mb-0">Passed my oral qualification exam</p>
-                            </div>
-                            <div class="news-item mb-4">
-                                <span class="news-date">Sept 2024</span>
-                                <p class="news-content mb-0">Started PhD in Biomedical Engineering at UMass Amherst</p>
-                            </div>
-                            <div class="news-item mb-4">
-                                <span class="news-date">May 2024</span>
-                                <p class="news-content mb-0">Graduated from BITS Pilani with BE in Electronics and Instrumentation</p>
-                            </div>
-                            <div class="news-item">
-                                <span class="news-date">May 2024</span>
-                                <p class="news-content mb-0">Graduated from IIT Madras with BSc (Online) in Data Science and Applications</p>
-                            </div>
-                        </div>
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="education-card">
+                        <p>
+                            I'm a researcher specializing in AI and Biomedical Engineering, focusing on developing cutting-edge 
+                            machine learning models for healthcare applications. With experience in multiple AI projects including 
+                            medical image analysis, reinforcement learning, and RAG systems, I'm passionate about creating 
+                            impactful technology solutions that advance healthcare and biomedical research.
+                        </p>
+                        <p>
+                            My work spans from developing predictive models for battery technology to creating intelligent systems 
+                            for medical diagnostics. I'm constantly exploring new methodologies to enhance healthcare through 
+                            artificial intelligence.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <style>
-            .news-section {
-                height: 100%;
-                padding: 2rem;
-            }
-            .news-item {
-                position: relative;
-                padding-left: 20px;
-                border-left: 2px solid rgba(255, 255, 255, 0.2);
-            }
-            .news-date {
-                display: inline-block;
-                padding: 4px 8px;
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: 4px;
-                font-size: 0.85rem;
-                color: rgba(255, 255, 255, 0.9);
-                margin-bottom: 8px;
-            }
-            .news-content {
-                color: rgba(255, 255, 255, 0.8);
-                font-size: 0.95rem;
-                line-height: 1.5;
-            }
-            .news-item:before {
-                content: '';
-                position: absolute;
-                left: -6px;
-                top: 8px;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background: #fff;
-            }
-        </style>
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="education-card">
+                        <div class="education-degree">Ph.D. in Biomedical Engineering</div>
+                        <div class="education-institution">University of Massachusetts Amherst</div>
+                        <div class="education-years">2024-Present</div>
+                        <p>Conducting research at the intersection of artificial intelligence and biomedical engineering with a focus on developing novel computational methods for healthcare applications.</p>
+                    </div>
+                    
+                    <div class="education-card">
+                        <div class="education-degree">B.E. in Electronics and Instrumentation</div>
+                        <div class="education-institution">Birla Institute of Technology and Science Pilani</div>
+                        <div class="education-years">2020-2024</div>
+                        <p>Minor in Computing and Intelligence</p>
+                    </div>
+                    
+                    <div class="education-card">
+                        <div class="education-degree">BSc in Data Science and Applications</div>
+                        <div class="education-institution">Indian Institute of Technology Madras</div>
+                        <div class="education-years">2021-2024</div>
+                        <p>Online degree program focused on data science fundamentals, statistical methods, and machine learning applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Publications Section -->
-    <section class="py-5 bg-white">
+    <section id="publications" class="publications-section">
         <div class="container">
-            <h2 class="display-5 fw-bold mb-5">Publications</h2>
-            <div class="row g-4">
-                <!-- Battery Research Publication -->
-                <div class="col-12">
-                    <div class="project-card">
+            <h2 class="section-title">Publications</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="publication-card">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="assets/battery-tech.png" alt="Battery Technology Research" class="project-image h-100">
+                                <img src="assets/battery-tech.png" alt="Battery Technology Research" class="img-fluid h-100" style="object-fit: cover; padding: 1rem;">
                             </div>
                             <div class="col-md-8">
                                 <div class="p-4">
-                                    <span class="badge-custom text-white mb-3 d-inline-block">Energy Storage (Wiley)</span>
-                                    <h3 class="h4 mb-3">Machine-Learning based prediction of Vanadium Redox Flow Battery stack temperature rise</h3>
-                                    <p class="mb-4">Advanced machine learning system for real-time temperature monitoring and prediction in VRFB systems. Novel approach for enhancing battery performance through predictive analytics.</p>
-                                    <a href="https://onlinelibrary.wiley.com/doi/10.1002/est2.70087" class="btn btn-primary rounded-pill" target="_blank">
+                                    <span class="project-tag">Energy Storage (Wiley)</span>
+                                    <h3 class="project-title">Machine-Learning based prediction of Vanadium Redox Flow Battery stack temperature rise</h3>
+                                    <p class="project-desc">Advanced machine learning system for real-time temperature monitoring and prediction in VRFB systems. Novel approach for enhancing battery performance through predictive analytics.</p>
+                                    <a href="https://onlinelibrary.wiley.com/doi/10.1002/est2.70087" class="btn btn-project" target="_blank">
                                         <i class="fas fa-book me-2"></i>Read Publication
                                     </a>
                                 </div>
@@ -228,23 +489,23 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="py-5">
+    <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="display-5 fw-bold mb-5">Featured Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="row g-4">
                 <!-- ArXiv Mind App Project -->
                 <div class="col-lg-4">
                     <div class="project-card">
-                        <div class="project-image d-flex align-items-center justify-content-center">
+                        <div class="d-flex align-items-center justify-content-center" style="height: 200px; background-color: rgba(255, 255, 255, 0.05);">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 70%; height: auto; fill: #4169E1;">
                                 <path d="M184 0c30.9 0 56 25.1 56 56l0 400c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56l0-400c0-30.9 25.1-56 56-56z"/>
                             </svg>
                         </div>
-                        <div class="p-4">
-                            <span class="badge-custom text-white mb-3 d-inline-block">AI Research Assistant</span>
-                            <h3 class="h4 mb-3">ArXiv Mind App</h3>
-                            <p class="mb-4">An intelligent research assistant that leverages RAG (Retrieval Augmented Generation) and free AI models to analyze, compare, and extract insights from research papers.</p>
-                            <a href="https://github.com/AnirudhNarayan/ArXiv-Mind-Gen-AI-App" class="btn btn-primary rounded-pill" target="_blank">
+                        <div class="project-content">
+                            <span class="project-tag">AI Research Assistant</span>
+                            <h3 class="project-title">ArXiv Mind App</h3>
+                            <p class="project-desc">An intelligent research assistant that leverages RAG (Retrieval Augmented Generation) and free AI models to analyze, compare, and extract insights from research papers.</p>
+                            <a href="https://github.com/AnirudhNarayan/ArXiv-Mind-Gen-AI-App" class="btn btn-project" target="_blank">
                                 <i class="fab fa-github me-2"></i>View Project
                             </a>
                         </div>
@@ -255,11 +516,11 @@
                 <div class="col-lg-4">
                     <div class="project-card">
                         <img src="assets/rl-project.png" alt="IoT-Fog Computing" class="project-image">
-                        <div class="p-4">
-                            <span class="badge-custom text-white mb-3 d-inline-block">Deep Reinforcement Learning</span>
-                            <h3 class="h4 mb-3">IoT-Fog Computing Task Offloading</h3>
-                            <p class="mb-4">Developed a multi-agent DQN system with LSTM integration for intelligent task offloading in Fog computing environments. Achieved significant improvements in performance metrics.</p>
-                            <a href="https://github.com/AnirudhNarayan/Reinforcement-Learning-Project" class="btn btn-primary rounded-pill" target="_blank">
+                        <div class="project-content">
+                            <span class="project-tag">Deep Reinforcement Learning</span>
+                            <h3 class="project-title">IoT-Fog Computing Task Offloading</h3>
+                            <p class="project-desc">Developed a multi-agent DQN system with LSTM integration for intelligent task offloading in Fog computing environments. Achieved significant improvements in performance metrics.</p>
+                            <a href="https://github.com/AnirudhNarayan/Reinforcement-Learning-Project" class="btn btn-project" target="_blank">
                                 <i class="fab fa-github me-2"></i>View Project
                             </a>
                         </div>
@@ -270,11 +531,11 @@
                 <div class="col-lg-4">
                     <div class="project-card">
                         <img src="assets/lung-cancer.png" alt="Lung Cancer Detection" class="project-image">
-                        <div class="p-4">
-                            <span class="badge-custom text-white mb-3 d-inline-block">AI in Healthcare</span>
-                            <h3 class="h4 mb-3">Lung Nodule Classification</h3>
-                            <p class="mb-4">Innovative deep learning solution that analyzes CT scans to identify and classify lung nodules for early cancer detection. Implemented using state-of-the-art CNN architectures.</p>
-                            <a href="https://github.com/AnirudhNarayan/Lung-Nodule-Classification-using-Deep-Learning-Models" class="btn btn-primary rounded-pill" target="_blank">
+                        <div class="project-content">
+                            <span class="project-tag">AI in Healthcare</span>
+                            <h3 class="project-title">Lung Nodule Classification</h3>
+                            <p class="project-desc">Innovative deep learning solution that analyzes CT scans to identify and classify lung nodules for early cancer detection. Implemented using state-of-the-art CNN architectures.</p>
+                            <a href="https://github.com/AnirudhNarayan/Lung-Nodule-Classification-using-Deep-Learning-Models" class="btn btn-project" target="_blank">
                                 <i class="fab fa-github me-2"></i>View Project
                             </a>
                         </div>
@@ -285,11 +546,11 @@
                 <div class="col-lg-4">
                     <div class="project-card">
                         <img src="assets/education-analytics.png" alt="Education Analytics Platform" class="project-image">
-                        <div class="p-4">
-                            <span class="badge-custom text-white mb-3 d-inline-block">ML Analytics</span>
-                            <h3 class="h4 mb-3">Student Enrollment Analysis</h3>
-                            <p class="mb-4">Machine learning-based system for predicting student enrollment status and identifying at-risk students. Helps educational institutions improve retention rates.</p>
-                            <a href="https://github.com/AnirudhNarayan/Student-Enrollment-Status-Machine-Learning-Project" class="btn btn-primary rounded-pill" target="_blank">
+                        <div class="project-content">
+                            <span class="project-tag">ML Analytics</span>
+                            <h3 class="project-title">Student Enrollment Analysis</h3>
+                            <p class="project-desc">Machine learning-based system for predicting student enrollment status and identifying at-risk students. Helps educational institutions improve retention rates.</p>
+                            <a href="https://github.com/AnirudhNarayan/Student-Enrollment-Status-Machine-Learning-Project" class="btn btn-project" target="_blank">
                                 <i class="fab fa-github me-2"></i>View Project
                             </a>
                         </div>
@@ -300,11 +561,11 @@
                 <div class="col-lg-4">
                     <div class="project-card">
                         <img src="assets/ticket-show.png" alt="Ticket Show Application" class="project-image">
-                        <div class="p-4">
-                            <span class="badge-custom text-white mb-3 d-inline-block">Web Development</span>
-                            <h3 class="h4 mb-3">Ticket Show App</h3>
-                            <p class="mb-4">Full-stack ticket booking platform built with Flask and Vue.js. Features user authentication, show management, booking system, and admin dashboard with real-time analytics.</p>
-                            <a href="https://github.com/AnirudhNarayan/ticket-show-app" class="btn btn-primary rounded-pill" target="_blank">
+                        <div class="project-content">
+                            <span class="project-tag">Web Development</span>
+                            <h3 class="project-title">Ticket Show App</h3>
+                            <p class="project-desc">Full-stack ticket booking platform built with Flask and Vue.js. Features user authentication, show management, booking system, and admin dashboard with real-time analytics.</p>
+                            <a href="https://github.com/AnirudhNarayan/ticket-show-app" class="btn btn-project" target="_blank">
                                 <i class="fab fa-github me-2"></i>View Project
                             </a>
                         </div>
@@ -314,21 +575,18 @@
         </div>
     </section>
 
-    <!-- Technical Skills Section -->
-    <section class="py-5 bg-dark text-white">
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
         <div class="container">
-            <h2 class="display-5 fw-bold mb-5">
-                <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="Technical Skills" width="40" style="margin-right: 10px;">
-                Technical Skills
-            </h2>
+            <h2 class="section-title">Technical Skills</h2>
             
             <!-- Programming Languages -->
-            <div class="skill-category mb-4">
-                <h3 class="h5 mb-3">
-                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Desktop%20Computer.png" alt="Programming" width="25" style="margin-right: 10px;">
+            <div class="skill-category">
+                <h3 class="skill-category-title">
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Desktop%20Computer.png" alt="Programming">
                     Programming Languages
                 </h3>
-                <div class="d-flex flex-wrap gap-2">
+                <div class="d-flex flex-wrap">
                     <span class="skill-badge" style="background: #3776AB;">
                         <i class="fab fa-python me-1"></i> PYTHON
                     </span>
@@ -342,12 +600,12 @@
             </div>
 
             <!-- Machine Learning & AI -->
-            <div class="skill-category mb-4">
-                <h3 class="h5 mb-3">
-                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" alt="ML & AI" width="25" style="margin-right: 10px;">
+            <div class="skill-category">
+                <h3 class="skill-category-title">
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" alt="ML & AI">
                     Machine Learning & AI
                 </h3>
-                <div class="d-flex flex-wrap gap-2">
+                <div class="d-flex flex-wrap">
                     <span class="skill-badge" style="background: #EE4C2C;">
                         <i class="fas fa-fire me-1"></i> PYTORCH
                     </span>
@@ -376,12 +634,12 @@
             </div>
 
             <!-- Data Science -->
-            <div class="skill-category mb-4">
-                <h3 class="h5 mb-3">
-                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Data Science" width="25" style="margin-right: 10px;">
+            <div class="skill-category">
+                <h3 class="skill-category-title">
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Data Science">
                     Data Science
                 </h3>
-                <div class="d-flex flex-wrap gap-2">
+                <div class="d-flex flex-wrap">
                     <span class="skill-badge" style="background: #013243;">
                         <i class="fas fa-calculator me-1"></i> NUMPY
                     </span>
@@ -398,28 +656,28 @@
             </div>
 
             <!-- Web Development -->
-            <div class="skill-category mb-4">
-                <div class="d-flex align-items-center mb-3">
-                    <img src="assets/web-dev-icon.png" alt="Web Dev" class="me-2" style="width: 24px; height: 24px;">
-                    <h3 class="h5 mb-0">Web Development</h3>
-                </div>
-                <div class="d-flex flex-wrap gap-2">
-                    <span class="skill-badge" style="background: #42B883; padding: 8px 16px; border-radius: 20px; font-weight: 600;">
+            <div class="skill-category">
+                <h3 class="skill-category-title">
+                    <i class="fas fa-code me-2" style="color: #42B883;"></i>
+                    Web Development
+                </h3>
+                <div class="d-flex flex-wrap">
+                    <span class="skill-badge" style="background: #42B883;">
                         <i class="fab fa-vuejs me-1"></i> VUE.JS
                     </span>
-                    <span class="skill-badge" style="background: #000000; padding: 8px 16px; border-radius: 20px; font-weight: 600;">
+                    <span class="skill-badge" style="background: #000000;">
                         <i class="fas fa-flask me-1"></i> FLASK
                     </span>
                 </div>
             </div>
 
             <!-- Cloud & Tools -->
-            <div class="skill-category mb-4">
-                <h3 class="h5 mb-3">
-                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud.png" alt="Cloud & Tools" width="25" style="margin-right: 10px;">
+            <div class="skill-category">
+                <h3 class="skill-category-title">
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud.png" alt="Cloud & Tools">
                     Cloud & Tools
                 </h3>
-                <div class="d-flex flex-wrap gap-2">
+                <div class="d-flex flex-wrap">
                     <span class="skill-badge" style="background: #F05032;">
                         <i class="fab fa-git-alt me-1"></i> GIT
                     </span>
@@ -432,31 +690,56 @@
                 </div>
             </div>
         </div>
-
-        <style>
-            .skill-badge {
-                display: inline-flex;
-                align-items: center;
-                padding: 8px 12px;
-                border-radius: 6px;
-                font-size: 0.85rem;
-                font-weight: 600;
-                color: white;
-                margin: 2px;
-            }
-            .gap-2 {
-                gap: 0.5rem !important;
-            }
-            .skill-category {
-                background: rgba(255, 255, 255, 0.05);
-                border-radius: 10px;
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-        </style>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="contact-info">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-title">Email</div>
+                                    <div class="contact-text">anirudhnarayand4@gmail.com</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div class="contact-title">LinkedIn</div>
+                                    <div class="contact-text"><a href="https://www.linkedin.com/in/anirudh-narayan-1b708a241/" target="_blank" style="color: var(--text-muted); text-decoration: none;">Anirudh Narayan</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="contact-title">GitHub</div>
+                                    <div class="contact-text"><a href="https://github.com/AnirudhNarayan" target="_blank" style="color: var(--text-muted); text-decoration: none;">AnirudhNarayan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Anirudh Narayan. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>
