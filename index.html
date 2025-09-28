@@ -358,36 +358,31 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home">HOME</a>
+                        <a class="nav-link" href="#about">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">ABOUT</a>
+                        <a class="nav-link" href="#experience">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#education">EDUCATION</a>
+                        <a class="nav-link" href="#education">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#publications">PUBLICATIONS</a>
+                        <a class="nav-link" href="#projects">Featured Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tutorials">TUTORIALS</a>
+                        <a class="nav-link" href="#publications">Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">SKILLS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">CONTACT</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -433,20 +428,35 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="py-5">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title text-center mb-4">Experience</h2>
+            <div class="row">
+                <!-- Research Experience Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-gradient-primary text-white rounded-top">
+                            <h5 class="card-title mb-0">Research Experience</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Date:</strong> September 2024 to May 2025</p>
+                            <p>As a Research Assistant, I worked on Graph Neural Networks (GNNs) and GNN + Physics models to analyze Tau pathology on pathological data. This research combined advanced machine learning techniques with domain-specific physics to uncover insights into Tau-related diseases.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="experience-item">
-                <h3>Research Experience</h3>
-                <p><strong>Date:</strong> September 2024 to May 2025</p>
-                <p>As a Research Assistant, I worked on Graph Neural Networks (GNNs) and GNN + Physics models to analyze Tau pathology on pathological data. This research combined advanced machine learning techniques with domain-specific physics to uncover insights into Tau-related diseases.</p>
-            </div>
-
-            <div class="experience-item">
-                <h3>Teaching Assistant</h3>
-                <p><strong>Course:</strong> BME 414 Senior Capstone Design</p>
-                <p>Assisted in grading and lab modules for the course, providing support to students in their senior capstone design projects.</p>
+                <!-- Teaching Assistant Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-gradient-secondary text-white rounded-top">
+                            <h5 class="card-title mb-0">Teaching Assistant</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Course:</strong> BME 414 Senior Capstone Design</p>
+                            <p>Assisted in grading and lab modules for the course, providing support to students in their senior capstone design projects.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
