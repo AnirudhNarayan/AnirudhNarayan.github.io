@@ -1,0 +1,12 @@
+# Ignore local backups and drafts
+index.html.backup
+new-index.html
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+
+# Node / Python / IDE leftovers (kept minimal)
+node_modules/
+__pycache__/
+*.pyc
